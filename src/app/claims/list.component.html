@@ -13,12 +13,12 @@
   </thead>
   <tbody>
     <tr *ngFor="let Claim of claims" style="color: darkred">
-      <td>{{Claim.beneId}}</td>
-      <td>{{Claim.state}}</td>
-      <td>{{Claim.county}}</td>
-      <td>{{Claim.daysAdmitted}}</td>
-      <td>{{Claim.inscClaimAmtReimbursed}}</td>
-      <td>{{Claim.race}}</td>
+      <td><b>{{Claim.beneId}}</b></td>
+      <td><b>{{Claim.state}}</b></td>
+      <td><b>{{Claim.county}}</b></td>
+      <td><b>{{Claim.daysAdmitted}}</b></td>
+      <td><b>{{Claim.inscClaimAmtReimbursed}}</b></td>
+      <td><b>{{Claim.race}}</b></td>
       <td style="white-space: nowrap">
         <a routerLink="edit/{{Claim.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
         <button (click)="verifyClaim(Claim.id)" class="btn btn-sm btn-info mr-1" [disabled]="Claim.isVerifying">
