@@ -1,5 +1,5 @@
-<h3 *ngIf="isAddMode">Add Claim</h3>
-<h3 *ngIf="!isAddMode">Edit Claim</h3>
+<div style="text-align: center;"><h3 *ngIf="isAddMode">Add Claim</h3></div>
+<div style="text-align: center;"><h3 *ngIf="!isAddMode">Edit Claim</h3></div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <h5>Profile Information</h5>
   <div class="form-row">
