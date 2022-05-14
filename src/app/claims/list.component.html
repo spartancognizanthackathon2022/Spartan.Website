@@ -1,24 +1,24 @@
-<h1>Claims</h1>
+<h1>Claims Management</h1>
 <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Claim</a>
 <table class="table table-striped">
   <thead>
     <tr>
       <th style="width: 30%">Patient</th>
-      <th style="width: 30%">Provider</th>
-      <th style="width: 30%">Age</th>
-      <th style="width: 10%">InPatient</th>
-            <th style="width: 30%">Dead</th>
-            <th style="width: 10%">Days Admitted</th>
+      <th style="width: 10%">State</th>
+      <th style="width: 10%">County</th>
+      <th style="width: 20%">Days Admitted</th>
+      <th style="width: 30%">Claim Amount Reimbursed</th>
+      <th style="width: 10%">Race</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let Claim of claims">
+    <tr *ngFor="let Claim of claims" style="color: darkred">
       <td>{{Claim.beneId}}</td>
-      <td>{{Claim.provider}}</td>
-      <td>{{Claim.age}}</td>
-      <td>{{Claim.isInpatient}}</td>
-      <td>{{Claim.isDead}}</td>
+      <td>{{Claim.state}}</td>
+      <td>{{Claim.county}}</td>
       <td>{{Claim.daysAdmitted}}</td>
+      <td>{{Claim.inscClaimAmtReimbursed}}</td>
+      <td>{{Claim.race}}</td>
       <td style="white-space: nowrap">
         <a routerLink="edit/{{Claim.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
         <button (click)="verifyClaim(Claim.id)" class="btn btn-sm btn-info mr-1" [disabled]="Claim.isVerifying">

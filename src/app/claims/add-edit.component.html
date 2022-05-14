@@ -20,6 +20,14 @@
       </div>
     </div>
     <div class="form-group col-3">
+      <label>Attending Physician</label>
+      <input type="text" formControlName="attendingPhysician" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.attendingPhysician.errors }" />
+      <div *ngIf="submitted && f.attendingPhysician.errors" class="invalid-feedback">
+        <div *ngIf="f.attendingPhysician.errors.required">Attending Physician is required</div>
+      </div>
+    </div>
+    <div class="form-group col-3">
       <label>Age</label>
       <input type="number" formControlName="age" class="form-control"
         [ngClass]="{ 'is-invalid': submitted && f.age.errors }" />
@@ -29,17 +37,26 @@
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-2">
+    <div class="form-group col-3">
       <div class="custom-control custom-switch">
         <input type="checkbox" formControlName="isInpatient" class="custom-control-input" id="customSwitches100">
         <label class="custom-control-label" for="customSwitches100">InPatient</label>
       </div>
     </div>
-    <div class="form-group col-2">
-      <select id="customSelect">
-        <option *ngFor="let Gender of keys(genders)" [ngValue]="genders[Gender]">{{Gender}}</option>
-      </select>
+    <div class="form-group col-3">
+      <div class="custom-control custom-switch">
+        <input type="checkbox" formControlName="Gender" class="custom-control-input" id="customSwitches101">
+        <label class="custom-control-label" for="customSwitches101">Gender</label>
+      </div>
     </div>
+        <div class="form-group col-3">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" formControlName="isDead" class="custom-control-input" id="customSwitches102">
+            <label class="custom-control-label" for="customSwitches102">isDead</label>
+          </div>
+        </div>
+  </div>
+  <div class="form-row">
     <div class="form-group col-3">
       <label>Race</label>
       <input type="number" formControlName="race" class="form-control"
@@ -49,11 +66,19 @@
       </div>
     </div>
     <div class="form-group col-3">
-      <label>isDead</label>
-      <input type="number" formControlName="isDead" class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f.isDead.errors }" />
-      <div *ngIf="submitted && f.isDead.errors" class="invalid-feedback">
-        <div *ngIf="f.isDead.errors.required">isDead is required</div>
+      <label>County</label>
+      <input type="number" formControlName="county" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.county.errors }" />
+      <div *ngIf="submitted && f.county.errors" class="invalid-feedback">
+        <div *ngIf="f.county.errors.required">County is required</div>
+      </div>
+    </div>
+    <div class="form-group col-3">
+      <label>State</label>
+      <input type="number" formControlName="state" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.state.errors }" />
+      <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+        <div *ngIf="f.state.errors.required">State is required</div>
       </div>
     </div>
   </div>

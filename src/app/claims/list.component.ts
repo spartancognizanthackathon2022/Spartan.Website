@@ -3,7 +3,6 @@ import { first } from 'rxjs/operators';
 
 import { Claimservice, AlertService } from '@app/_services';
 import { Claim } from '@app/_models';
-import { Result } from '@app/_models';
 
 @Component({ templateUrl: 'list.component.html' })
 export class ListComponent implements OnInit {
@@ -34,7 +33,9 @@ export class ListComponent implements OnInit {
     if (!Claim) return;
 
     this.Claimservice.verify(Claim)
-      .pipe(first())
-      .subscribe((data: Result) => Boolean(data[0]) ? this.alertService.success("Not Fraud Claim") : this.alertService.error("Fraud Claim"));
+		.pipe(first())
+		.subscribe((data) =>
+			data > 0 ? this.alertService.error('Fraud Claim') : this.alertService.success('Clean Claim')
+		);
   }
 }

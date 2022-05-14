@@ -10,7 +10,6 @@ import { first } from 'rxjs/operators';
 
 import { Claimservice, AlertService } from '@app/_services';
 import { MustMatch } from '@app/_helpers';
-import { Genders } from '@app/_models';
 
 @Component({
   templateUrl: 'add-edit.component.html',
@@ -23,7 +22,6 @@ export class AddEditComponent implements OnInit {
   loading = false;
   submitted = false;
   keys = Object.keys;
-  genders = Genders;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -42,11 +40,14 @@ export class AddEditComponent implements OnInit {
       // Patient Information
       beneId: ['', Validators.required],
       provider: ['', Validators.required],
+      attendingPhysician: ['', Validators.required],
       age: [0, Validators.required],
       isInpatient: [0, Validators.required],
       gender: [0, Validators.required],
       race: [0, Validators.required],
       isDead: [0, Validators.required],
+      county: [0, Validators.required],
+      state: [0, Validators.required],
 
       // Historical conditions
       renalDiseaseIndicator: [false, Validators.required],
