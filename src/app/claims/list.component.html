@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th style="width: 30%">Patient</th>
+      <th style="width: 20%">Provider</th>
       <th style="width: 10%">State</th>
       <th style="width: 10%">County</th>
       <th style="width: 20%">Days Admitted</th>
@@ -16,6 +17,7 @@
   <tbody>
     <tr *ngFor="let Claim of claims" style="color: darkred">
       <td><b>{{Claim.beneId}}</b></td>
+      <td><b>{{Claim.provider}}</b></td>
       <td><b>{{Claim.state}}</b></td>
       <td><b>{{Claim.county}}</b></td>
       <td><b>{{Claim.daysAdmitted}}</b></td>
