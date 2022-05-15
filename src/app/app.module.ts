@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { MsalModule, MsalRedirectComponent, MsalGuard } from '@azure/msal-angular';
 import { PublicClientApplication, InteractionType } from '@azure/msal-browser';
 import { PowerBIEmbedModule } from 'powerbi-client-angular';
-import { AnalyticsComponent } from './analytics/analytics.component';
 import { environment } from 'src/environments/environment';
 import { TeamComponent, TeamThumbnailComponent, TeamService } from './team';
 
@@ -56,7 +55,6 @@ const isIE =
     AppComponent,
     HomeComponent,
     AlertComponent,
-    AnalyticsComponent,
     TeamComponent,
     TeamThumbnailComponent,
   ],
