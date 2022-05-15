@@ -7,8 +7,8 @@ export const environment = {
   aadClientId: '3b007631-b43a-4087-8048-591ecd8b3fc6',
   tenantId: 'a1a2578a-8fd3-4595-bb18-7d17df8944b0',
   redirectUrl: 'http://localhost:4200/',
-  apiUrl: 'https://localhost:44331/api/ClaimsTests',
-  apiMlUrl: 'https://localhost:44331/api/MachineLearning',
+  apiUrl: 'https://func-spartan-claims.azurewebsites.net/api/ClaimsTests',
+  apiMlUrl: 'https://func-spartan-claims.azurewebsites.net/api/MachineLearning',
   powerBI: {
     reportBaseURL: 'https://app.powerbi.com/reportEmbed',
     qnaBaseURL: 'https://app.powerbi.com/qnaEmbed',
